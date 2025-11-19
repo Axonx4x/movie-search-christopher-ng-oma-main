@@ -44,3 +44,135 @@
 .watch-btn:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+/* --- MOVIE CARD STYLES (Task 2 Update) --- */
+
+/* 1. The Card Container (Glassmorphism) */
+.movie-card {
+  background: rgba(15, 23, 42, 0.6); /* Dark Blue Glass */
+  border: 1px solid rgba(0, 216, 255, 0.1); /* Subtle Cyan Border */
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(10px); /* Blur effect behind card */
+  height: 100%; /* Ensures consistent height in grid */
+}
+
+.movie-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px rgba(0, 216, 255, 0.25); /* Cyan Glow */
+  border-color: rgba(0, 216, 255, 0.5);
+}
+
+/* 2. Image Area */
+.card-image-container {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.movie-card:hover .card-img {
+  transform: scale(1.05); /* Slow zoom on hover */
+}
+
+/* 3. Floating Star Rating */
+.rating-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.85);
+  color: #ffd700; /* Gold Star */
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  border: 1px solid #ffd700;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+  z-index: 2;
+}
+
+/* 4. Content Area */
+.card-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  text-align: left;
+}
+
+.card-title {
+  color: #fff;
+  font-size: 1.4rem;
+  margin: 0 0 12px 0;
+  font-family: "Orbitron", sans-serif; /* Keeps your font */
+  text-shadow: 0 0 5px rgba(0, 216, 255, 0.3);
+}
+
+/* 5. Meta Data (Date & Lang) */
+.card-meta {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+  margin-bottom: 15px;
+  font-size: 0.85rem;
+  align-items: center;
+}
+
+.year-badge {
+  background-color: rgba(0, 216, 255, 0.1);
+  color: #00d8ff; /* Cyan Text */
+  padding: 4px 10px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 216, 255, 0.3);
+  font-family: monospace;
+}
+
+.lang-text {
+  color: #94a3b8;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* 6. Description (Truncates nicely) */
+.card-desc {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Limit to 3 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  flex-grow: 1;
+}
+
+/* 7. The "View Details" Button */
+.details-btn {
+  width: 100%;
+  padding: 12px;
+  background: transparent;
+  color: #00d8ff;
+  border: 1px solid #00d8ff;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  font-family: "Orbitron", sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.details-btn:hover {
+  background: #00d8ff;
+  color: #000; /* Black text on Cyan background */
+  box-shadow: 0 0 15px rgba(0, 216, 255, 0.6);
+}
