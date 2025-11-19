@@ -1,0 +1,46 @@
+/* This container replaces the body styling for the landing page */
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Takes full viewport height */
+  text-align: center;
+}
+
+.title {
+  font-size: 3.2rem;
+  color: #00d8ff;
+  text-shadow: 0 0 12px #00d8ff;
+  margin-bottom: 0.5rem;
+  line-height: 1.1;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  color: #94a3b8;
+  margin-bottom: 2rem;
+}
+
+.watch-btn {
+  background: linear-gradient(90deg, #2563eb, #7e22ce);
+  color: #fff;
+  border: none;
+  border-radius: 40px;
+  padding: 0.8rem 1.8rem;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.watch-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px #7e22ce;
+}
+
+.watch-btn:focus,
+.watch-btn:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}

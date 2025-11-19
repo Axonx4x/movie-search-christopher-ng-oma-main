@@ -1,0 +1,26 @@
+:root {
+  font-family: "Orbitron", sans-serif; /* Moving the font here globally */
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: dark;
+  color: #e2e8f0;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  /* RESTORED BACKGROUND HERE: */
+  background: radial-gradient(circle at top left, #020617 0%, #0a0f2b 80%);
+  background-attachment: fixed; /* Keeps bg fixed while scrolling */
+}
+
+/* Ensure root takes full height */
+#root {
+  min-height: 100vh;
+  width: 100%;
+}
