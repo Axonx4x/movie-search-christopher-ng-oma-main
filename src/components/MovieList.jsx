@@ -27,7 +27,7 @@ const MovieList = () => {
 
 const styles = {
   pageContainer: {
-    // This matches the Landing Page background exactly
+    
     background: 'radial-gradient(circle at top left, #020617 0%, #0a0f2b 80%)',
     minHeight: '100vh',
     padding: '40px 20px',
@@ -62,7 +62,7 @@ const styles = {
   },
   grid: {
     display: 'grid',
-    // Auto-fit creates a responsive grid that adjusts columns automatically
+ 
     gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
     gap: '40px',
     maxWidth: '1200px',
