@@ -1,6 +1,5 @@
 import React from 'react';
 
-// Receiving the "movie" object as a prop
 const MovieCard = ({ movie }) => {
   return (
     <div className="movie-card" style={styles.card}>
@@ -30,7 +29,7 @@ const MovieCard = ({ movie }) => {
   );
 };
 
-// Simple inline styles for the card (You can move this to CSS file if you prefer)
+
 const styles = {
   card: {
     backgroundColor: '#1e293b',
